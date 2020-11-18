@@ -1,0 +1,97 @@
+<section class="properties-section">
+
+    <div class="col-lg-12 search-wrapper">
+        <div class="col-lg-12 clearfix">
+            <div class="col-lg-9 input-wrapper">
+                <input type="text" placeholder="Enter Address to search">
+            </div>
+            <div class="col-lg-3 input-wrapper">
+                <button class="btn search-btn"><i class="fa fa-search"></i>SEARCH</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Property Item Begin -->
+    <div *ngFor="let property of allPropertiesData; let i = index" class="item-outer-wrapper col-lg-12">
+        <div class="item-inner col-lg-12 clearfix">
+            <div class="info-wrapper clearfix">
+                <div class="col-lg-4 float-left">
+                    <div class="img-wrapper">
+                        <img src="https://i.pinimg.com/originals/05/2b/0c/052b0cdd5fbcf6575f31bfd7520d3721.png">
+                    </div>
+                    <div class="title-wrapper">
+                        <p class="property-title">Hyatt Residency</p>
+                        <p class="property-location"><i class="fa fa-map-marker"></i>Pune VadgaonSheri</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 float-left">
+
+                    <div class="detail-row col-lg-12">
+                        <div class="detail-item col-lg-12 float-left">
+                            <div class="col-lg-12 detail-item-label float-left">
+                                <p>Hyat Residency</p>
+                            </div>
+                        </div>
+                        <div class="favorite-icon">
+                            <!-- Add active-eart class if property is added to favourite -->
+                            <!-- <i class="fa fa-heart active-heart"></i>
+                            <i class="fa fa-heart"></i> -->
+                        </div>
+                    </div>
+
+                    <div class="detail-row col-lg-12">
+                        <div class="detail-item col-lg-12 float-left">
+                            <div class="col-lg-12 detail-item-label float-left">                            
+                                <p>VadgaonSheri Pune near Niramay Hospital</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-row col-lg-12">
+                        <div class="detail-item col-lg-12 float-left">
+                            <div class="col-lg-12 detail-item-label float-left">
+                                <p>Cuisines:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-row col-lg-12">
+                        <div class="detail-item col-lg-12 float-left">
+                            <div class="col-lg-12 detail-item-label float-left">
+                                <p>Availability: 7 AM - 10 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-row col-lg-12 item-footer">
+                        <div class="detail-item col-lg-12 float-left">
+                            <a class="btn contact-seller-btn" [routerLink]="['/dishes']" [queryParams]="{restaurantName: 'Hyat Hotel'}">
+                                <i class="fa fa-info-circle"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Attributes/Features Section End -->
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <!-- <ngb-pagination *ngIf="totalSize" class="d-flex justify-content-center" (pageChange) = "onPageChange($event)" [collectionSize]="totalSize" [(page)]="page"></ngb-pagination> -->
+    <!-- Property Item End -->
+
+    <div *ngIf="isPropertyDataEmpty === true" class="item-outer-wrapper empty-outer-wrapper col-lg-12">
+        <div class="item-inner col-lg-10 offset-lg-1 clearfix">
+            <div class="info-wrapper clearfix">
+                <div class="col-lg-12 float-left">
+                    <div class="img-wrapper empty-icon-wrapper">
+                        <img src= "../../assets/icons/error.png" alt="No Property Found">
+                    </div>
+                    <div class="title-wrapper">
+                        <p class="property-title">No Property Found! Try adjusting your filters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

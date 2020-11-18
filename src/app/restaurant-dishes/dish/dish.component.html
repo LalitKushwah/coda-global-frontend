@@ -1,0 +1,59 @@
+<div class="item-inner col-lg-12 clearfix">
+    <div class="info-wrapper clearfix">
+        <div class="col-lg-4 float-left">
+            <div class="img-wrapper">
+                <img [src]="imgUrl">
+            </div>
+            <div class="title-wrapper">
+                <p class="property-title">{{ name }}</p>
+                <p class="property-location"><i class="fa fa-map-marker"></i>{{ address }}</p>
+            </div>
+        </div>
+        <div class="col-lg-8 float-left">
+
+            <div class="detail-row col-lg-12">
+                <div class="detail-item col-lg-12 float-left">
+                    <div class="col-lg-12 detail-item-label float-left">
+                        <p>{{ description }}</p>
+                    </div>
+                </div>
+                <div class="favorite-icon">
+                    <!-- Add active-eart class if property is added to favourite -->
+                    <!-- <i class="fa fa-heart active-heart"></i>
+                    <i class="fa fa-heart"></i> -->
+                </div>
+            </div>
+
+            <div class="detail-row col-lg-12">
+                <div class="detail-item col-lg-12 float-left">
+                    <div class="col-lg-12 detail-item-label float-left">                            
+                        <p>{{ address }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-row col-lg-12">
+                <div class="detail-item col-lg-12 float-left">
+                    <div class="col-lg-12 detail-item-label float-left">
+                        <p>{{ ingridiants }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-row col-lg-12">
+                <div class="detail-item col-lg-12 float-left">
+                    <div class="col-lg-12 detail-item-label float-left">
+                        <p>Price {{ price }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-row col-lg-12 item-footer">
+                <div class="detail-item col-lg-12 float-left">
+                    <button class="btn place-order-btn" routerLinkActive="router-link-active" (click)="addItemToCart(name, price, imgUrl)">
+                        <i class="fa fa-info-circle"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            <!-- Attributes/Features Section End -->
+        </div>
+    </div>
+</div>

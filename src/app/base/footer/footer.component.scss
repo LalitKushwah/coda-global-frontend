@@ -1,0 +1,60 @@
+@import '../../../styles.scss';
+footer{
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: 5em 3em;
+    
+    .brand-wrapper{
+        float: left;
+        padding: 10px 30px;
+    }
+
+    .contact-details-wrapper{
+        float: left;
+        .contact-details-title{
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+        i{
+            padding-right: 8px;
+        }
+        .address-link{
+            cursor: pointer;
+            a{
+                color: var(--primary-text-color);
+                text-decoration: none;
+                &:hover{
+                    color: var(--primary-text-color);
+                }
+            }
+        }
+    }
+
+    .social-links-wrapper{
+        float: left;
+        .social-links-title{
+            font-weight: 500;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+
+        .social-link-icon{
+            box-shadow: var(--basic-shadow);
+            float: left;
+            text-align: center;
+            padding: 6px;
+            background: var(--primary-text-color);
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            color: var(--primary-color);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="container">
+    <div>
+        <h2>
+            {{ restaurantName }}
+        </h2>
+    </div>
+    <div>
+        <app-dish 
+            *ngFor="let dish of list"
+            [name]="dish.name"
+            [address]="dish.address"
+            [ingridiants]="dish.ingridiants"
+            [availablity]="dish.availability"
+            [description]="dish.discription"
+            [imgUrl]="dish.imgUrl"
+            [price]="dish.price"
+            >
+        </app-dish>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+@import '../../../styles.scss';
+.navbar{
+    box-shadow: var(--shadow-100);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    .navbar-brand{
+        color: var(--primary-color);
+        font-size: px;
+        font-weight: 700;
+        width: 50%;
+    }
+    .navbar-nav{
+        .router-link-active{
+            border-bottom: 2px solid var(--primary-color);
+        }
+    }
+    ul{
+        li{
+            padding: 0 10px;
+            a{
+                color: var(--primary-color);
+                font-size: 16px;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    transform: translateY(-2px);
+                    border-bottom: 2px solid var(--primary-color);
+                }
+            }
+            .login-btn{
+                color: var(--primary-text-color);
+                font-size: 16px;
+                font-weight: 500;
+                background: var(--primary-color);
+                border-radius: 60px;
+                padding: 8px 20px;
+                margin-top: px;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    transform: translateY(-2px);
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .btn-select-city{
+        color: var(--primary-color);
+        outline: none !important;
+        width: 130px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 20px 8px 0;
+        margin-top: 3px;
+
+        &:focus, &:active{
+            outline: none !important;
+            border: none;
+        }
+    }
+}
+
+.dropdown-menu{
+    padding: 10px;
+    border: none;
+    box-shadow: var(--basic-shadow);
+}
+
+input, button{
+    &:focus, &:active{
+        outline: none !important;
+        box-shadow: none !important;
+        border: 1px solid #ced4da;
+    }
+}

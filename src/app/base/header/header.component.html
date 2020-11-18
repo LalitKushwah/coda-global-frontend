@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" [routerLink]="['/home']">Coda Global Restaurant</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" 
+            [routerLink]="['/home']">
+            Orders</a>            
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+            [routerLink]="['/cart']">
+            Cart</a>            
+        </li>
+        
+            <!-- <button class="btn btn-select-city" type="button" data-toggle="modal" data-target="#exampleModal">
+                ALL CITIES <i class="fa fa-caret-down"></i>
+            </button> -->
+              <!-- <button class="btn btn-select-city" type="button" (click)="openCityModal(content)">
+                  {{selectedCityName !== null ? selectedCityName : 'SELECT CITY'}} <i class="fa fa-caret-down"></i>
+              </button> -->
+            <!-- <div class="dropdown">
+                <button class="btn btn-select-city" type="button" id="citySelectDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ALL CITIES <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="citySelectDropdown">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="searchDropdown" placeholder="Search">
+                   </div>
+                    <button class="dropdown-item" type="button">City 1</button>
+                    <button class="dropdown-item" type="button">City 2</button>
+                    <button class="dropdown-item" type="button">City 2</button>
+                </div>
+            </div> -->
+      </ul>
+    </div>
+</nav>
+
+<ng-template #content let-modal>
+  <!-- <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Select your city</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+
+</ng-template>

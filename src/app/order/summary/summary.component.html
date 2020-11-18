@@ -1,0 +1,8 @@
+<div>
+    <app-dish 
+    *ngFor="let dish of cart"
+    [name]="dish.name"
+    [imgUrl]="dish.imgUrl"
+    [price]="dish.price"
+    ></app-dish>
+</div>
