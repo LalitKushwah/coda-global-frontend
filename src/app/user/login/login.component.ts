@@ -29,23 +29,26 @@ export class LoginComponent implements OnInit {
 
   createLoginForm(): void {
     this.loginForm = this.formBuilder.group({
-      userLoginId: ['' , Validators.required],
+      userId: ['' , Validators.required],
       password: ['', Validators.required]
     });
   }
 
   onLogin(): void {
+    console.log(this.loginForm.value);
     this.authService.userLogin(this.loginForm.value).subscribe((responseData: any) => {
       if (responseData.status === 200) {
-        this.loginForm.reset();
         toast(
           responseData.message,
           { duration: 3000 }
-        );
+          );
+        localStorage.setItem('userId', this.loginForm.value.userId);
+        this.loginForm.reset();
+        this.router.navigate(['/home']);
       } else {
         toast(
           responseData.message,
-          { duration: 3000 }
+          { duration: 3000, position: 'top' }
         );
       }
     }, err => {

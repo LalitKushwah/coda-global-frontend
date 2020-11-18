@@ -1,4 +1,9 @@
 @import '../../../styles.scss';
+.footer-sticky {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
 footer{
     background: var(--primary-color);
     color: var(--primary-text-color);

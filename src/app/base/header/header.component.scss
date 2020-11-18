@@ -5,6 +5,8 @@
     top: 0;
     background: white;
     z-index: 100;
+    height: 74px;
+
     .navbar-brand{
         color: var(--primary-color);
         font-size: px;
@@ -15,6 +17,24 @@
         .router-link-active{
             border-bottom: 2px solid var(--primary-color);
         }
+    }
+    li.nav-item {
+        width: 109px;
+    }
+    svg {
+        margin-left: 5px;
+        margin-top: -5px;
+    }
+    .badge {
+        background-color: #59B274;
+        color: white;
+        border-radius: 50%;
+        height: 16px;
+        width: 17px;
+        font-size: 12px;
+        margin-left: -9px;
+        margin-top: -4px;
+        position: absolute;
     }
     ul{
         li{

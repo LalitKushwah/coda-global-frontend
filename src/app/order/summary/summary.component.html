@@ -1,8 +1,48 @@
+<div class="m-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="cart.length > 0">
+            <tr *ngFor="let dish of cart">
+                <td>1</td>
+                <td>
+                    {{ dish.name }}
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    {{ dish.price }}
+                </td>
+                <td>
+                    1 * {{ dish.price }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;"><strong>Total:</strong> </td>
+                <td>{{ totalPrice }}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="cart.length === 0" class="noData">
+            <tr>
+                <td colspan="5">
+                    <p>
+                        No Products Available in cart!
+                    </p>
+                </td>   
+            </tr>
+        </tbody>
+        <button class="btn submit-order-btn" (click)="submitOrder()">
+            <i class="fa fa-info-circle"></i> Submit Order
+        </button>
+    </table>
+</div>
 <div>
-    <app-dish 
-    *ngFor="let dish of cart"
-    [name]="dish.name"
-    [imgUrl]="dish.imgUrl"
-    [price]="dish.price"
-    ></app-dish>
 </div>

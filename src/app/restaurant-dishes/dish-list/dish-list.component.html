@@ -1,10 +1,10 @@
-<div class="container">
-    <div>
-        <h2>
+<div class="container-flex">
+    <div class="header p-4">
+        <h2 style="text-align: center;">
             {{ restaurantName }}
         </h2>
     </div>
-    <div>
+    <div class="row">
         <app-dish 
             *ngFor="let dish of list"
             [name]="dish.name"
@@ -12,8 +12,9 @@
             [ingridiants]="dish.ingridiants"
             [availablity]="dish.availability"
             [description]="dish.discription"
-            [imgUrl]="dish.imgUrl"
+            [imgUrl]="dish.imgURL"
             [price]="dish.price"
+            class="col-lg-6"
             >
         </app-dish>
     </div>

@@ -3,6 +3,11 @@
 .properties-section{
     padding: 2em;
 }
+.spinner-border {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
 .search-wrapper{
     padding: 1em 2em;
 
@@ -86,10 +91,37 @@
 .empty-outer-wrapper{
     text-align: center;
 }
+.property-location {
+    font-size: 12px;
+    font-weight: 800;
+}
+svg {
+    margin-right: 5px;
+}
+.location {
+    font-size: 16px;
+}
+
+.right-content {
+    margin-top: 9%!important;
+    text-align: center;
+}
+.img-wrapper {
+    margin-left: 5%;
+}
+.timings {
+    text-align: center;
+    font-size: 16px;
+    margin-top: -14px;
+}
 .item-outer-wrapper{
+    .item-inner.col-lg-6 {
+        max-width: 48%;
+    }
     padding: 2em;
     .item-inner{
         box-shadow: var(--basic-shadow);
+        margin: 10px;
         padding: 20px 10px;
         border-radius: 10px;
         .img-wrapper{
@@ -108,6 +140,7 @@
 
         .title-wrapper{
             padding-top: 20px;
+            text-align: center;
             .property-title{
                 font-size: 1.2em;
                 font-weight: 500;
@@ -170,6 +203,7 @@
 
         .item-footer{
             padding-top: 20px;
+            margin-top: 48px;
 
             // div{
             //     padding: 0;

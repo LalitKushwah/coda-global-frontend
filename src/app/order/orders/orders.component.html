@@ -1,0 +1,59 @@
+<div class="order-wrapper p-4">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" (click)="showCurrentOrders()" [ngClass]="[ pastOrder ? 'active' : '']">Current Orders</button>
+        <button type="button" class="btn btn-secondary" (click)="showPastOrders()" [ngClass]="[ currentOrder ? 'active' : '']">Past Orders</button>
+    </div>
+
+    <div class="current-Orders m-4" *ngIf="currentOrder">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Order Id</th>
+                    <th>Quantity</th>
+                    <th>Order Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let activeOrder of activeOrders; let i = index">
+                    <td>{{ i +1 }}</td>
+                    <td>
+                        {{ activeOrder._id }}
+                    </td>
+                    <td>
+                        {{ activeOrder.products.length }}
+                    </td>
+                    <td>
+                        {{ activeOrder.orderTotal }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="past-Orders m-4" *ngIf="pastOrder">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Order Id</th>
+                    <th>Quantity</th>
+                    <th>Order Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pastOrder of pastOrders; let i = index">
+                    <td>{{ i + 1}}</td>
+                    <td>
+                        {{ pastOrder._id }}
+                    </td>
+                    <td>
+                        {{ pastOrder.products.length }}
+                    </td>
+                    <td>
+                        {{ pastOrder.orderTotal }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

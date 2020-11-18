@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './user/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +12,7 @@ import { FooterComponent } from './base/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DishComponent } from './restaurant-dishes/dish/dish.component';
 import { DishListComponent } from './restaurant-dishes/dish-list/dish-list.component';
-import { OrdersComponent } from './user/orders/orders.component';
+import { OrdersComponent } from './order/orders/orders.component';
 import { SummaryComponent } from './order/summary/summary.component';
 
 @NgModule({
@@ -32,7 +32,8 @@ import { SummaryComponent } from './order/summary/summary.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

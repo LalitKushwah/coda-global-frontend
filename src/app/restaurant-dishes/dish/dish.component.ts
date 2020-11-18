@@ -26,7 +26,6 @@ export class DishComponent implements OnInit {
     const item = { name, price, imgUrl };
     this.cartService.addItemToCart(item);
     toast('Item Added Successfully', { duration: 1000, position: 'bottom' });
-    console.log(this.cartService.getCart());
   }
 
 }

@@ -6,6 +6,9 @@ export default {
     },
     apiMethods: {
         userLogin: 'user/login',
-        resetPassword: 'user/resetpassword'
+        resetPassword: 'user/resetpassword',
+        loadRstaurants: 'restaurants/',
+        createOrder: 'orders/',
+        getOrders: 'orders/'
     }
 };
