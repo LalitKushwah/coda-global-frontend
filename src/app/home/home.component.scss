@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-.properties-section{
+.home-section{
     padding: 2em;
 }
 .spinner-border {
@@ -91,7 +91,7 @@
 .empty-outer-wrapper{
     text-align: center;
 }
-.property-location {
+.restarant-location {
     font-size: 12px;
     font-weight: 800;
 }
@@ -141,13 +141,13 @@ svg {
         .title-wrapper{
             padding-top: 20px;
             text-align: center;
-            .property-title{
+            .restarant-title{
                 font-size: 1.2em;
                 font-weight: 500;
                 color: var(--primary-text-dark-700-color);
                 margin-bottom: 0px;
             }
-            .property-location{
+            .restarant-location{
                 color: var(--primary-text-dark-500-color);
                 i{
                     color: var(--primary-color);

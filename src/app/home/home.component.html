@@ -1,4 +1,4 @@
-<section class="properties-section">
+<section class="home-section">
 
     <div class="col-lg-12 search-wrapper">
         <div class="col-lg-12 clearfix">
@@ -31,8 +31,8 @@
                         <img [src]="restaurant.imgUrl">
                     </div>
                     <div class="title-wrapper">
-                        <p class="property-title">{{ restaurant.name }}</p>
-                        <p class="property-location">
+                        <p class="restaurant-title">{{ restaurant.name }}</p>
+                        <p class="restaurant-location">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                                 <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -77,15 +77,15 @@
       <!-- <ngb-pagination *ngIf="totalSize" class="d-flex justify-content-center" (pageChange) = "onPageChange($event)" [collectionSize]="totalSize" [(page)]="page"></ngb-pagination> -->
     <!-- Property Item End -->
 
-    <div *ngIf="isPropertyDataEmpty === true" class="item-outer-wrapper empty-outer-wrapper col-lg-12">
+    <div *ngIf="isRestaurantDataEmpty === true" class="item-outer-wrapper empty-outer-wrapper col-lg-12">
         <div class="item-inner col-lg-10 offset-lg-1 clearfix">
             <div class="info-wrapper clearfix">
                 <div class="col-lg-12 float-left">
                     <div class="img-wrapper empty-icon-wrapper">
-                        <img src= "../../assets/icons/error.png" alt="No Property Found">
+                        <p>No Restaurant found</p>
                     </div>
                     <div class="title-wrapper">
-                        <p class="property-title">No Property Found! Try adjusting your filters.</p>
+                        <p class="restaurant-title">No Restaurant Found! Try adjusting your filters.</p>
                     </div>
                 </div>
             </div>

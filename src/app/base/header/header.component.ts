@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RestaurantService } from '../../../provider/restaurant.service';
 import { CartService } from '../../../provider/cart-service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit , OnDestroy {
   itemCount = 0;
   countSubscription: Subscription;
-  constructor(private cartService: CartService) {
+
+  constructor(private cartService: CartService, public router: Router) {
 
   }
 
