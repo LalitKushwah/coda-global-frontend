@@ -3,6 +3,7 @@ import { CartService } from '../../../provider/cart-service';
 import { OrderService } from '../../../provider/order.service';
 import toast from 'toast-me';
 import { Router } from '@angular/router';
+import constants from 'src/app/utility/constants';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -29,11 +30,11 @@ export class SummaryComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log(this.order.products);
     this.order.userId = localStorage.getItem('userId');
     this.orderService.createOrder(this.order).subscribe(res => {
-      toast('Order has been placed successfully', { timeout: 1000 });
+      toast('Order has been placed successfully', { duration: constants.toast.timeout });
       this.cartService.resetCart();
       this.router.navigate(['orders']);
     }, err => {
-      toast(err, { timeout: 1000 });
+      toast(err, { duration: constants.toast.timeout });
     });
   }
 

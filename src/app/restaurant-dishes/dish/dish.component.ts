@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CartService } from '../../../provider/cart-service';
 import toast from 'toast-me';
+import constants from 'src/app/utility/constants';
 
 @Component({
   selector: 'app-dish',
@@ -25,7 +26,7 @@ export class DishComponent implements OnInit {
   addItemToCart(name, price, imgUrl): void {
     const item = { name, price, imgUrl };
     this.cartService.addItemToCart(item);
-    toast('Item Added Successfully', { duration: 1000, position: 'bottom' });
+    toast('Item Added Successfully', { duration: constants.toast.timeout, position: 'bottom' });
   }
 
 }

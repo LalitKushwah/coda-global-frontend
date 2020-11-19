@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   CONSTANTS: any = constants;
   showPassword = false;
   loginForm: FormGroup;
-  // userDetails: UserDetails;
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -38,30 +37,22 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.authService.userLogin(this.loginForm.value).subscribe((responseData: any) => {
       if (responseData.status === 200) {
-        toast(
-          responseData.message,
-          { duration: 3000 }
-          );
+        toast(responseData.message , { duration: constants.toast.timeout });
         localStorage.setItem('userId', this.loginForm.value.userId);
         this.loginForm.reset();
         this.router.navigate(['/home']);
       } else {
-        toast(
-          responseData.message,
-          { duration: 3000, position: 'top' }
+        toast(responseData.message, { duration: constants.toast.timeout }
         );
       }
     }, err => {
       const status = err.status;
-      toast(
-        this.CONSTANTS.HTTP_STATUS_MESSAGE_MAP[status],
-        { duration: 3000 }
-      );
+      toast(this.CONSTANTS.HTTP_STATUS_MESSAGE_MAP[status], { duration: constants.toast.timeout });
     });
   }
 
   createNewAccount(): void {
-    toast('This functionality is not is scope of assignment', { duration: 3000 });
+    toast('This functionality is not is scope of assignment', { duration: constants.toast.timeout });
   }
 
   togglePasswordView(): void {

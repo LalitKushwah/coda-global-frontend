@@ -10,5 +10,8 @@ export default {
         loadRstaurants: 'restaurants/',
         createOrder: 'orders/',
         getOrders: 'orders/'
+    },
+    toast: {
+        timeout: 2000
     }
 };
